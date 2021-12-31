@@ -1,80 +1,108 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-    	<meta content="width=device-width, initial-scale=1" name="viewport">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/themify-icons.css">
-		<link rel="stylesheet" href="css/style.css">
-		<title>OPREK FKIP</title>
-	</head>
-	<body>
-		<div class="container">
-			<div class="row justify-content-md-center mt-12">
-				<div class="col-sm-8">
-					<div class="row border-box">
-						<div class="col-sm-6 p-0">
-							<img src="img/logo.png" class="img-fluid">
-						</div>
-						<div class="col-sm-6 p-0">
-							<div class="card">
-								<div class="card-header">
-								
-									<div class="sub-title">
-										<strong>Formulir Pendaftaran pengurus 
-										<br>Fakultas Ilmu Pendidikan Periode 2021/2022</strong>
-									</div>
-								</div>
-							
-								<div class="card-body ">
-									<form action="https://formspree.io/f/xgedvyln" method="post">
-									  <div class="input-group mb-3">
-										  
-										  <input type="text" class="form-control input-login" name="email" placeholder="Alamat email" required>
-										</div>
-									  <div class="input-group mb-3">
-										 
-										  <input type="text" class="form-control input-login" name="nama" placeholder="Nama Lengkap" required>
-										</div>
-										<div class="input-group mb-3">
-										 
-										  <input type="text" class="form-control input-login" name="prodi" placeholder="Program Studi" required>
-										</div>
-										<div class="input-group mb-3">
-										 
-										  <input type="text" class="form-control input-login" name="smt" placeholder="Semester" required>
-										</div>
-										<div class="input-group mb-3">
-										 
-										  <input type="text" class="form-control input-login" name="lahir" placeholder="Tempat tgl Lahir" required>
-										</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OPREK FKIP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+        <img src="logo.png" alt=""  style="width: 100%; height: auto;">
+       
+        <div class="steps">
+            <h1 id="title">Formulir Pendaftaran Pengurus Fakultas Ilmu Pendidikan Periode 2021/2022</h1>
+            
+        </div>
+        <form action="https://formspree.io/f/xgedvyln" method="post" id="survey-form">
+            <div class="steps">
+                <label id="name-label" for="name">Nama</label>
+                <input autofocus type="text" name="nama" id="name" class="input-field" placeholder="Nama Lengkap" required>
+            </div>
+            <div class="steps">
+                <label id='email-label' for="email">Email</label>
+                <input type="email" name="email" id="email" class="input-field" placeholder="some@gmail.com" required>
+            </div>
+             <div class="steps">
+                <label id='email-label' for="ps">Program Studi</label>
+                <select name="ps" id="dropdown" class="dropdown">
+                    <option value="PGSD">Pendidikan Guru Sekolah Dasar</option>
+                    <option value="PMAT">Pendidikan Matematika</option>
+                    <option value="PBI">Pendidikan Bahasa Indonesia</option>
+                     <option value="PBIN">Pendidikan Bahasa Inggris</option>
+                </select>
+            </div>
+            <div class="steps">
+                <label id="number-label" for="semester">Semester</label>
+                <input type="number" name="semester" id="semester" min="0" max="3000" class="input-field" placeholder="5">
+            </div>
+            <div class="steps">
+                <label for="jk">Jenis Kelamin</label>
+                <select name="jk" id="dropdown" class="dropdown">
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="steps">
+                <label id='email-label' for="alamat">Alamat</label>
+                <input type="text" name="alamat" id="alamat" class="input-field" placeholder="desa,rt/rw,kec,kab" required>
+            </div>
+             <div class="steps">
+                <label id='email-label' for="nw">Nomor Whatsapp</label>
+                <input type="text" name="nw" id="nw" class="input-field" placeholder="+62" required>
+            </div>
 
-										<div class="input-group mb-3">
-										 
-										  <input type="text" class="form-control input-login" name="alamat" placeholder="Alamat" required>
-										</div>
-										<div class="input-group mb-3">
-										 
-										  <input type="number" class="form-control input-login" name="nohp" placeholder="No Whatsapp" required>
-										</div>
+            <div class="steps">
+                <label for="rate">Mahasiswa minimal semester 3?</label>
+              <ul class="choices">
+                    <li class="checkbox"><label><input name="q1" value="1" type="checkbox" class="things"> Iya</label></li>
+                    <li class="checkbox"><label><input name="q1" value="2" type="checkbox" class="things"> Tidak</label></li>
+                   
+                </ul>
+            </div>
+             <div class="steps">
+                <label for="rate">Mempunyai kemauan dan loyalitas?</label>
+              <ul class="choices">
+                    <li class="checkbox"><label><input name="q1" value="1" type="checkbox" class="things"> Iya</label></li>
+                    <li class="checkbox"><label><input name="q1" value="2" type="checkbox" class="things"> Tidak</label></li>
+                   
+                </ul>
+            </div>
 
-										<h6><strong style="color: darkred;">Sebelum Joint Group whatsapp Daftar terlebih dahulu !</strong></h6>
-									  
-									  <button type="submit" class="btn btn-primary float-right" >Daftar <i class="ti-angle-double-right" style="font-size: 12px"></i></button>
-									 <button class="btn btn-success float-right"><a href="https://chat.whatsapp.com/GsokQV4d53CElGWyAlJ552" style="color: aliceblue;text-align: center;text-decoration: none;text-transform: none;">Joint Group Whatsapp</a> </button>
-									</form>
+             <div class="steps">
+                <label for="rate">Memiliki Pengalaman organisasi?</label>
+              <ul class="choices">
+                    <li class="checkbox"><label><input name="q1" value="1" type="checkbox" class="things"> Iya</label></li>
+                    <li class="checkbox"><label><input name="q1" value="2" type="checkbox" class="things"> Tidak</label></li>
+                   
+                </ul>
+            </div>
 
-								</div>
-								<br><br>
-								<a href="https://www.mediapatner.com" style="text-align: center;">show.create</a>
-								
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				
-			</div>
-		</div>
-	</body>
+              <div class="steps">
+                <label for="rate">Mengisi Formulir pendaftaran ini?</label>
+              <ul class="choices">
+                    <li class="checkbox"><label><input name="q1" value="1" type="checkbox" class="things"> Iya</label></li>
+                    <li class="checkbox"><label><input name="q1" value="2" type="checkbox" class="things"> Tidak</label></li>
+                   
+                </ul>
+            </div>
+
+              <p style="text-align: center; color: yellow; background-color: yellowgreen;"><strong>Setelah submit harap kembali ke halaman ini dan tekan tombol <i>JOINT</i> untuk bergabung dengan group whatsapp</strong></p>
+          
+            <div class="steps">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+            <p style="text-align: center;"><strong>Gabung Group Whatsapp</strong></p>
+             <div class="steps"> 
+                <button id="submit" style="background-color: green; color: white;"><a href="https://chat.whatsapp.com/GsokQV4d53CElGWyAlJ552" style="color: black;text-align: center;text-decoration: none;text-transform: none;">JOINT</a></button>
+            </div>
+         
+            <footer>
+                <a href="https://www.mediapatner.com/" target="_blank"><span>2021 &copy; Dev</span></a>
+            </footer>
+        </form>
+    </main>
+</body>
 </html>
